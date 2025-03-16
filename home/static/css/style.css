@@ -1,0 +1,20 @@
+.carousel-control-prev, 
+.carousel-control-next {
+    border: 2px solid black; /* Siyah kenarlık */
+    background-color: white; /* İç rengi beyaz */
+    width: 50px; /* Buton genişliği */
+    height: 50px; /* Buton yüksekliği */
+    border-radius: 50%; /* Yuvarlak buton */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; /* Görünürlüğü tam yap */
+    top: 50%; /* Dikey olarak ortala */
+    transform: translateY(-50%); /* Tam hizalamak için */
+}
+
+/* Ok ikonlarının rengini değiştirme */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    filter: invert(1); /* Siyah ikonu beyaza çevir */
+}
