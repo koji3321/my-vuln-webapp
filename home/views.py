@@ -1,12 +1,15 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse
-from urllib import parse
+from django.utils.safestring import mark_safe
 
 def home(request):
     return render(request,"home/index.html")
 
 def xss(request):
-    return render(request,"home/xss.html")
+    try:
+        payload=request.GET['q']
+    except:
+        payload=''
+    return render(request,"home/xss.html",{'id':mark_safe(payload)})
 
 def rce(request):
     return render(request,"home/xss.html")
