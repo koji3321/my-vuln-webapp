@@ -6,15 +6,48 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container">
-        <form action="/xss" method="get">
-            <div class="input-group mb-3 mt-5">
-                <span class="input-group-text" id="inputGroup-sizing-default">Payload</span>
-                <input type="text" class="form-control" name="q" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <div class="mt-5 container">
+        <div class="row row-cols-1 row-cols-md-4 row-cols-sm-1 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">lab 1</h5>
+                  <p class="card-text">you can solve this with xss basics</p>
+                  <a href="/xss/1" class="btn btn-primary stretched-link">Go to lab</a>
+                </div>
               </div>
-        </form>
-        <div class="d-flex justify-content-center mt-5 text-light" style="height: 100vh;">
-            <h1>{{id}}</h1>
-        </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 2</h5>
+                    <p class="card-text">you can solve this with context based xss don't make it memor</p>
+                    <a href="/xss/2" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 3</h5>
+                    <p class="card-text">you can solve this with inspect the html code</p>
+                    <a href="/xss/3" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 4</h5>
+                    <p class="card-text">you can solve this with xss basics</p>
+                    <a href="/xss/4" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+          </div>
     </div>
 {% endblock %}
