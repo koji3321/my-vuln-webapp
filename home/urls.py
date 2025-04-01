@@ -8,4 +8,6 @@ urlpatterns=[
     path('xss/<str:id>',views.xsspages,name="xsspage"),
     path('sqli',views.sqli,name="sqli"),
     path('rce',views.rce,name="rce"),
+    path('rce/',views.rce,name="rce"),
+    path('rce/<str:id>',views.rcepages,name="rce"),
 ]

@@ -1,1 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="mt-5 container">
+        <div class="row row-cols-1 row-cols-md-4 row-cols-sm-1 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">lab 1</h5>
+                  <p class="card-text">you can solve this with rce basics</p>
+                  <a href="/rce/1" class="btn btn-primary stretched-link">Go to lab</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 2</h5>
+                    <p class="card-text">you can solve this with using shell enviroments</p>
+                    <a href="/rce/2" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 3</h5>
+                    <p class="card-text">you can solve this with blind rce basics (note:use sleep command)</p>
+                    <a href="/rce/3" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 4</h5>
+                    <p class="card-text">you can solve this with rce enviroments (note:use sleep command)</p>
+                    <a href="/rce/4" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}
