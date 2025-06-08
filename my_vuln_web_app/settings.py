@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'my_vuln_web_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_vuln_web_app_db',           # MySQL'deki veritabanı adı
+        'USER': 'root',             # MySQL kullanıcı adın
+        'PASSWORD': 'password1233',    # MySQL şifren
+        'HOST': 'localhost',        # veya IP
+        'PORT': '3306',             # genelde 3306
     }
 }
 

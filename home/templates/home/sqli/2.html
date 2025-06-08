@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3 mt-5">
+                <span class="input-group-text" id="inputGroup-sizing-default">Payload</span>
+                <input type="text" class="form-control" name="id" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+        </form>
+        <div class=" mt-5 text-light" style="height: 100vh;">
+            {% for veri in product%}
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <h1><span style='color:rgb(202, 57, 67);'>title: </span>{{ veri.0 }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <h1><span style='color:rgb(77, 50, 200);'>description: </span>{{veri.1}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <h1><span style='color:rgb(41, 146, 41);'>price: </span>{{veri.2}}</h1>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

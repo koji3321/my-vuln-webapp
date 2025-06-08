@@ -1,1 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="mt-5 container">
+        <div class="row row-cols-1 row-cols-md-4 row-cols-sm-1 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">lab 1</h5>
+                  <p class="card-text">login bypass with sqli basics (try to login as admin)</p>
+                  <a href="/sqli/1" class="btn btn-primary stretched-link">Go to lab</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 2</h5>
+                    <p class="card-text">union based sql injection (database is mysql)</p>
+                    <a href="/sqli/2" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 3</h5>
+                    <p class="card-text">blind sql injection find the database name</p>
+                    <a href="/sqli/3" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">lab 4</h5>
+                    <p class="card-text">error based sql injection find the database name</p>
+                    <a href="/sqli/4" class="btn btn-primary stretched-link">Go to lab</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock %}
